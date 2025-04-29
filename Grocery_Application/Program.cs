@@ -6,35 +6,6 @@ namespace Assessments
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("------------------ Grovery Bill Calculator ------------------");
-            Console.WriteLine("||     ||    ||     ||    ||     ||     ||    ||     ||    ||");
-            Console.WriteLine("-------------------------------------------------------------");
-            Console.ResetColor();
-
-            Console.WriteLine("              Choose the Items for purchasing                   ");
-            Console.WriteLine("              101. Milk              - Rs.20.5                  ");
-            Console.WriteLine("              102. Coconut Oil       - Rs.50.0                  ");
-            Console.WriteLine("              103. Sugar             - Rs.15.5                  ");
-            Console.WriteLine("              104. Salt              - Rs.20.7                  ");
-            Console.WriteLine("              105. Rice              - Rs.50.0                  ");
-            Console.WriteLine("              106. Butter            - Rs.30.5                  ");
-
-            Console.WriteLine("                    For Billing Press '1'                  ");
-
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("____________________________________________________________");
-            Console.WriteLine("-------------------------------------------------------------");
-            Console.ResetColor();
-
-            Dictionary<int, double> itemsPrice = new Dictionary<int, double>();
-            itemsPrice.Add(101, 20.5);
-            itemsPrice.Add(102, 50.0);
-            itemsPrice.Add(103, 15.5);
-            itemsPrice.Add(104, 20.7);
-            itemsPrice.Add(105, 50.0);
-            itemsPrice.Add(106, 30.5);
-
             Dictionary<int, string> itemsName = new Dictionary<int, string>()
             {
                 {101, "Milk" },
@@ -44,6 +15,42 @@ namespace Assessments
                 {105, "Rice" },
                 {106,"Butter" }
             };
+
+            Dictionary<int, double> itemsPrice = new Dictionary<int, double>();
+            itemsPrice.Add(101, 20.5);
+            itemsPrice.Add(102, 50.0);
+            itemsPrice.Add(103, 15.5);
+            itemsPrice.Add(104, 20.7);
+            itemsPrice.Add(105, 50.0);
+            itemsPrice.Add(106, 30.5);
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("------------------ Grovery Bill Calculator ------------------");
+            Console.WriteLine("||     ||    ||     ||    ||     ||     ||    ||     ||    ||");
+            Console.WriteLine("-------------------------------------------------------------");
+            Console.ResetColor();
+            Console.WriteLine("              Choose the Items for purchasing                   ");
+            
+            foreach (KeyValuePair<int,string> i in itemsName)
+            {
+                Console.WriteLine($"              {i.Key}. {i.Value}                          ");
+            }
+            
+            //Console.WriteLine("              101. Milk              - Rs.20.5                  ");
+            //Console.WriteLine("              102. Coconut Oil       - Rs.50.0                  ");
+            //Console.WriteLine("              103. Sugar             - Rs.15.5                  ");
+            //Console.WriteLine("              104. Salt              - Rs.20.7                  ");
+            //Console.WriteLine("              105. Rice              - Rs.50.0                  ");
+            //Console.WriteLine("              106. Butter            - Rs.30.5                  ");
+
+            Console.WriteLine("                    For Billing Press '1'                  ");
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("____________________________________________________________");
+            Console.WriteLine("-------------------------------------------------------------");
+            Console.ResetColor();
+
+            
 
             Dictionary<string, double> produts = new Dictionary<string, double>();
             Console.ForegroundColor = ConsoleColor.Green;
